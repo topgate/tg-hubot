@@ -22,7 +22,7 @@ RUN echo "Host github.com\n\tStrictHostKeyChecking no\n" >> /root/.ssh/config
 # hubot setup
 RUN npm install -g coffee-script
 RUN git clone git@github.com:topgate/tg-hubot.git hubot
-RUN cd hubot
-RUN git checkout -b tg-custom origin/tg-custom
-RUN npm install
-RUN ./runhubot.sh
+RUN cd hubot && npm install
+RUN cd hubot && ./runhubot.sh
+
+# TODO Redisにつながってない
