@@ -1,1 +1,7 @@
-["redis-brain.coffee", "shipit.coffee"]
+[
+	"redis-brain.coffee",
+	"shipit.coffee",
+	"android-os.coffee",
+	"haskell.coffee",
+	"javascript-sandbox.coffee"
+]
