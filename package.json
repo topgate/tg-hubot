@@ -29,6 +29,10 @@
 
     "hubot-idobata": "0.0.2",
 
+    "sandbox": "0.8.3",
+    "phantom": "0.5.2",
+    "cheerio": "0.12.1",
+
     "hubot-thecat": "1.0.1"
   },
 
