@@ -1,5 +1,5 @@
 [
-	"redis-brain.coffee",
+	"file-brain.coffee",
 	"shipit.coffee",
 	"android-os.coffee",
 	"haskell.coffee",

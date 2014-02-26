@@ -4,7 +4,7 @@ MAINTAINER vvakame
 # setup
 RUN apt-get update
 # tools
-RUN apt-get install -y git curl
+RUN apt-get install -y git curl make g++
 # redis
 RUN apt-get install -y redis-server
 # node.js
@@ -26,5 +26,3 @@ WORKDIR /hubot
 RUN npm install
 RUN ./runhubot.sh
 # ENTRYPOINT ./runhubot.sh
-
-# TODO Redisにつながってない
