@@ -1,5 +1,6 @@
 [
 	"file-brain.coffee",
+	"redmine.coffee",
 	"shipit.coffee",
 	"android-os.coffee",
 	"haskell.coffee",
