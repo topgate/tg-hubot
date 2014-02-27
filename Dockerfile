@@ -12,6 +12,13 @@ ENV PATH $HOME.nodebrew/current/bin:$PATH
 RUN curl -L git.io/nodebrew | perl - setup && echo "export PATH=$HOME.nodebrew/current/bin:$PATH" >> .bashrc
 RUN nodebrew install-binary v0.10.26 && nodebrew use v0.10.26
 
+# start sshd
+RUN apt-get install -y openssh-server
+RUN mkdir /var/run/sshd
+RUN echo 'root:admin' |chpasswd
+EXPOSE 22
+CMD /usr/sbin/sshd -D
+
 # github private repo setup
 # RUN ssh-keygen -t rsa -N "" -f /root/.ssh/id_rsa
 RUN mkdir -p /root/.ssh
@@ -24,5 +31,4 @@ RUN npm install -g coffee-script
 RUN git clone git@github.com:topgate/tg-hubot.git hubot
 WORKDIR /hubot
 RUN npm install
-RUN ./runhubot.sh
-# ENTRYPOINT ./runhubot.sh
+CMD ./runhubot.sh
