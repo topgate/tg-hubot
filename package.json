@@ -33,7 +33,8 @@
     "phantom": "0.5.2",
     "cheerio": "0.12.1",
 
-    "hubot-thecat": "1.0.1"
+    "hubot-thecat": "1.0.1",
+    "hubot-plusplus": "1.0.0"
   },
 
   "engines": {
