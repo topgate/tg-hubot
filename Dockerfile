@@ -9,7 +9,7 @@ RUN apt-get install -y git curl make g++
 RUN apt-get install -y redis-server
 # node.js
 ENV PATH $HOME.nodebrew/current/bin:$PATH
-RUN curl -L git.io/nodebrew | perl - setup && echo "export PATH=$HOME.nodebrew/current/bin:$PATH" >> .bashrc
+RUN curl -L git.io/nodebrew | perl - setup && echo "export PATH=$HOME.nodebrew/current/bin:$PATH" >> ~/.bashrc
 RUN nodebrew install-binary v0.10.26 && nodebrew use v0.10.26
 
 # start sshd
