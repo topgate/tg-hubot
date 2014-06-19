@@ -31,4 +31,4 @@ RUN npm install -g coffee-script
 RUN git clone git@github.com:topgate/tg-hubot.git hubot
 WORKDIR /hubot
 RUN npm install
-CMD ./runhubot.sh
+ENTRYPOINT ./runhubot.sh
